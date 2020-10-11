@@ -15,8 +15,6 @@ setup(
         'torchvision',
         'transformers',
         'jupyterlab',
-        'pytest',
-        'ipywidgets',
-        
+        'pytest'
     ]
 )

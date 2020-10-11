@@ -6,7 +6,7 @@ of Tensorflow because PyTorch is more stable in its releases.
 which are useful when working with RNNs with variable length inputs.
 <ins>BERT</ins>
 
-BERT (Bi-Directional encoders from transformers) is from the [paper](https://arxiv.org/pdf/1810.04805.pdf) published by 
+BERT (Bi-Directional encoders from transformers) is from a [paper](https://arxiv.org/pdf/1810.04805.pdf) published by 
 Google in 2018. It is developed specifically for masked language modelling and next sentence predictions. The original code for BERT was developed using [Tensorflow](https://github.com/google-research/bert). It is based on transformers  
 (introduced in [Attention is all you need](https://arxiv.org/abs/1706.03762)). 
 
