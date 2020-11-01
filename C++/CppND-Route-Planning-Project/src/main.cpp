@@ -27,6 +27,33 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
     return std::move(contents);
 }
 
+
+bool checkRange(float user_input_x){
+//check here if the input is in the range [0, 100] inclusive.
+  if (user_input_x <0.0f || user_input_x > 100.0f){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+float getInput(std::string output_text){
+// this function asks the user to write the input and shows some output in return
+  float value;
+  bool value_start = false;
+  while(value_start == false){
+      std::cout <<output_text;
+      std::cin >> value;
+      value_start = checkRange(value);
+      if (value_start == true){
+        break;
+      }
+  }
+  return value;
+      
+}
+
 int main(int argc, const char **argv)
 {    
     std::string osm_data_file = "";
@@ -51,15 +78,13 @@ int main(int argc, const char **argv)
         else
             osm_data = std::move(*data);
     }
-    float start_x, start_y, end_x, end_y;
-    std::cout <<"Enter start X: ";
-    std::cin >> start_x;
-    std::cout<< "Enter start Y: ";
-    std::cin >> start_y;
-    std::cout <<"Enter end X: ";
-    std::cin >> end_x;
-    std::cout <<"Enter end Y: ";
-    std::cin >> end_y;
+    bool value_start = false;
+    bool value_end = false;
+    float start_x , start_y, end_x, end_y;
+    start_x = getInput("Enter start X in correct range [0, 100]: ");
+    start_y = getInput("Enter start Y in correct range [0, 100]: ");
+    end_x = getInput("Enter end X in correct range [0, 100]: ");
+    end_y = getInput("Enter end Y in correct range [0, 100]: ");
     RouteModel model{osm_data};
 
     // Create RoutePlanner object and perform A* search.
