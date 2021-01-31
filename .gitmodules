@@ -1,0 +1,6 @@
+[submodule "C++/C++/project"]
+	path = C++/C++/project
+	url = https://github.com/udacity/CppND-System-Monitor
+[submodule "C++/CppND-System-Monitor"]
+	path = C++/CppND-System-Monitor
+	url = https://github.com/udacity/CppND-System-Monitor.git
