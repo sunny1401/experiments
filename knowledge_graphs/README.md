@@ -45,31 +45,6 @@ By default, the names provided in model_scraps.py are taken as default location 
 The current \_\_fit method in class KnowledgeGraph is very limited. 
 
 
-<u>Discussion on tracking model and data changes </u>
-
-The pipeline class provides ResultTracker and uses mlflow for this purposes. 
-However the functionality is very limited. 
-Using the pipeline class only, we can track changes in parameters and metrics - 
-which would give an idea about what changed in the model. \_\_fit method method can be used to extend the 
-pipeline using training_kwargs, evaluator_kwargs and model_kwargs as .json files.
-
-To use MLFlow properly, we need to MLFLOW_TRACKING_URI and 
-MLFLOW_ARTIFACT_URI as environment variables. 
-
-We also need to provide Extra_ARGS for S3 in environent_variables 
-
-<u> TODO: update 1 </u>
-
-The model can definitely be trained in a better manner. 
-We can try for different loss functions - 
-Adaptive Margin Ranking Loss can alleviate some of the issues of loss function. 
-The loss function currently used in not very robust. 
-
-Stratified train-test split can be tried as a starting point -  would be wise to use the hyperop pipeline 
-and tune the parameters of the model. 
-
-Code very slow. Adapt the code - maybe adapt pykeen
-
 
 
 
