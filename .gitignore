@@ -1,3 +1,7 @@
 */.ipynb_checkpoints/*
 *.model
 .ipynb_checkpoints
+*.pkl
+*.json
+*.pdf
+*.txt
