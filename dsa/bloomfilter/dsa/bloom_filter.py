@@ -64,3 +64,9 @@ class BloomFilter:
         """
         n_hash = (size / n) * math.log(2)
         return int(n_hash)
+
+    def get_size_of_filter(self) -> float:
+        """
+        Return size of bloom filter
+        """
+        return sys.getsizeof(self.__filter) * 0.000001
