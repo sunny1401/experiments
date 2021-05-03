@@ -5,3 +5,7 @@
 *.json
 *.pdf
 *.txt
+*.jpeg
+*.png
+*/images/
+*/proposal_prac/
