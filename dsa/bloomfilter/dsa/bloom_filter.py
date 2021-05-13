@@ -69,4 +69,4 @@ class BloomFilter:
         """
         Return size of bloom filter
         """
-        return sys.getsizeof(self.__filter) * 0.000001
+        return sys.getsizeof(self.filter) * 0.000001
